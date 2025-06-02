@@ -1,0 +1,13 @@
+# PE05 - Cities with Countries and Currency
+
+## Input
+
+The application receives user input through two main forms. In the AddCity tab, users can enter a city name and its corresponding country name through text input fields. In the AddCountry tab, users input a country name and its currency code (such as USD, EUR, or JPY). The application validates that both fields are filled before processing the data. Input validation prevents empty submissions and duplicate country entries to maintain data integrity.
+
+## Process
+
+The application processes user input by storing data locally using AsyncStorage, React Native's persistent storage solution. When users submit city or country information, the app retrieves existing data from storage, validates the new entry, and appends it to the existing array. The bottom tab navigator manages navigation between four screens using React Navigation. State management is handled through React hooks (useState and useEffect) to manage component lifecycle and data updates. The FlatList component efficiently renders lists of cities and countries with proper styling and layout.
+
+## Output
+
+The application displays information through two main list screens. The Cities tab shows all added cities with their corresponding countries in a clean, card-based layout. The Countries tab displays a comprehensive list of countries with their respective currencies, featuring distinctive visual styling with colored borders. Both screens update automatically when new data is added. Empty states provide user guidance when no data exists. The interface uses consistent styling with proper spacing, colors, and typography to ensure a professional user experience across all four tabs.
